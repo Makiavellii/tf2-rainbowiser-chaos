@@ -5,7 +5,7 @@ This a HUD that gives an animated rainbow UI and a script which a random effect 
 NOTE: This is not exactly "random" but I did the best I can with source scripting limitations.
 
 # How do I download the mod?
-Head on over to the `Releases` tab or [click here](https://github.com/Makiavellii/tf2-rainbomizer/releases/latest)!  
+Head on over to the `Releases` tab or [click here](https://github.com/Makiavellii/tf2-rainbowizer-chaos/releases/latest)!  
 
 Installation is as simple as extracting the contents of the .zip file to your custom folder
 For example: `steam/steamapps/common/Team Fortress 2/tf/custom` <- extract contents of the .zip file like this.
