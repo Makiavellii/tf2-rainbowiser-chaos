@@ -2,8 +2,6 @@
 
 This a HUD that gives an animated rainbow UI and a script which a random effect every 30 seconds upon starting the timer.
 
-NOTE: This is not exactly "random" but I did the best I can with source scripting limitations.
-
 # How do I download the mod?
 Head on over to the `Releases` tab or [click here](https://github.com/Makiavellii/tf2-rainbowizer-chaos/releases/latest)!  
 
