@@ -1,0 +1,327 @@
+//====================================================================================================================
+
+event HudHealthBonusPulse
+{
+	Animate	PlayerStatusHealthBonusImage 			Alpha		"255"								Linear 	0.0 0.2
+	Animate	PlayerStatusHealthBonusImage 			Alpha		"0"									Linear 	0.2 0.4
+	
+	Animate PlayerStatusHealthValue 				FgColor 	"Red" 								Linear 	0.0 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Vermillion" 						Linear 	0.1 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Orange" 							Linear 	0.2 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Yellow" 							Linear 	0.3 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Lime" 								Linear 	0.4 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Green" 							Linear 	0.5 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Teal" 								Linear 	0.6 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Cyan" 								Linear 	0.7 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Aqua" 								Linear 	0.8 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Blue" 								Linear 	0.9 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Purple" 							Linear 	1.0 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Magenta" 							Linear 	1.1 0.1
+	Animate PlayerStatusHealthValue 				FgColor 	"Ruby" 								Linear 	1.2 0.1
+	Animate PlayerStatusHealthValueShadowExtra 		Alpha 		"255" 								Accel 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueTarget 			FgColor 	"Health Buff Target" 				Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueSpecgui 			FgColor 	"Health Buff Spec" 					Accel 	0.0 0.0
+	Animate PlayerStatusHealthValueSpecguiExtra 	Alpha 		"255" 								Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadowKiller 	FgColor 	"Health Buff Killer" 				Accel 	0.0 0.0
+
+	RunEvent HudHealthBonusPulseLoop				1.3
+}
+
+event HudHealthBonusPulseLoop
+{
+	RunEvent HudHealthBonusPulse					0.0
+}
+
+event HudHealthBonusPulseStop
+{
+	// Rainbowizer Health Reset
+	RunEvent HudHealthBonusPulseLoop				0.0
+	
+	Animate PlayerStatusHealthValueShadowExtra 		Alpha 		"0"									Accel 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueTarget 			FgColor 	"Health Numbers" 					Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthvalueSpecgui 			FgColor 	"Health Numbers" 					Accel	0.0 0.0
+	Animate PlayerStatusHealthValueSpecguiExtra 	Alpha 		"0" 								Accel 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadowKiller 	FgColor 	"Black" 							Linear 	0.0 0.0
+}
+
+//====================================================================================================================
+
+event HudHealthDyingPulse
+{
+	Animate	PlayerStatusHealthBonusImage 			Alpha		"255"								Linear 	0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 			Alpha		"0"									Linear 	0.125 0.075
+	
+	Animate PlayerStatusHealthValue 				FgColor 	"Health Hurt" 						Accel 	0.0 0.0
+	Animate PlayerStatusHealthValueShadowExtra 		Alpha 		"255" 								Accel	0.0 0.0
+	
+	Animate PlayerStatusHealthValueTarget 			FgColor 	"Health Hurt Target" 				Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthvalueSpecgui 			FgColor 	"Health Hurt Spec" 					Linear 	0.0 0.0
+	Animate PlayerStatusHealthValueSpecguiExtra 	Alpha 		"255" 								Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadowKiller 	FgColor 	"Health Hurt Killer" 				Accel 	0.0 0.0
+
+	RunEvent HudHealthDyingPulseLoop				0.25
+}
+
+event HudHealthDyingPulseLoop
+{
+	RunEvent HudHealthDyingPulse					0.0
+}
+
+event HudHealthDyingPulseStop
+{
+	
+	// Rainbowizer Health Reset
+	RunEvent HudHealthDyingPulseLoop				0.0
+	
+	Animate PlayerStatusHealthValueShadowExtra 		Alpha 		"0" 								Linear 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueTarget 			FgColor 	"Health Numbers" 					Accel 	0.0 0.0
+	
+	Animate PlayerStatusHealthvalueSpecgui 			FgColor 	"Health Numbers" 					Accel 	0.0 0.0
+	Animate PlayerStatusHealthValueSpecguiExtra 	Alpha 		"0" 								Accel 	0.0 0.0
+	
+	Animate PlayerStatusHealthValueShadowKiller 	FgColor 	"Black" 							Linear 	0.0 0.0
+}
+
+event HudLowAmmoPulse
+{
+	Animate AmmoInClip 							FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoInClip 							FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoInClip 							FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoInClip 							FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoInClip 							FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoInClip 							FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoInClip 							FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoInClip 							FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoInClip 							FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoInClip 							FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoInClip 							FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoInClip 							FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoInClip 							FgColor 	"Ruby" 									Linear 	1.2 0.1
+	
+	// Rainbowizer Ammo In Reserve Reset
+	Animate AmmoInReserve 						FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoInReserve 						FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoInReserve 						FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoInReserve 						FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoInReserve 						FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoInReserve 						FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoInReserve 						FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoInReserve 						FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoInReserve 						FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoInReserve 						FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoInReserve 						FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoInReserve 						FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoInReserve 						FgColor 	"Ruby" 									Linear 	1.2 0.1
+	// Rainbowizer Ammo In Clip Reset
+	Animate AmmoNoClip 							FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoNoClip 							FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoNoClip 							FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoNoClip 							FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoNoClip 							FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoNoClip 							FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoNoClip 							FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoNoClip 							FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoNoClip 							FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoNoClip 							FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoNoClip 							FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoNoClip 							FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoNoClip 							FgColor 	"Ruby" 									Linear 	1.2 0.1
+	
+	RunEvent HudLowAmmoPulseLoop					1.3
+}	
+
+event HudLowAmmoPulseLoop
+{
+	RunEvent HudLowAmmoPulse						0.0
+}
+
+event HudLowAmmoPulseStop
+{
+	//StopEvent HudLowAmmoPulse 						0.0
+	//StopEvent HudLowAmmoPulseLoop 					0.0
+	
+	// Rainbowizer Ammo In Clip Reset
+	Animate AmmoInClip 							FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoInClip 							FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoInClip 							FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoInClip 							FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoInClip 							FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoInClip 							FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoInClip 							FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoInClip 							FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoInClip 							FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoInClip 							FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoInClip 							FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoInClip 							FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoInClip 							FgColor 	"Ruby" 									Linear 	1.2 0.1
+	
+	// Rainbowizer Ammo In Reserve Reset
+	Animate AmmoInReserve 						FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoInReserve 						FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoInReserve 						FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoInReserve 						FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoInReserve 						FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoInReserve 						FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoInReserve 						FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoInReserve 						FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoInReserve 						FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoInReserve 						FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoInReserve 						FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoInReserve 						FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoInReserve 						FgColor 	"Ruby" 									Linear 	1.2 0.1
+	// Rainbowizer Ammo In Clip Reset
+	Animate AmmoNoClip 							FgColor 	"Red" 									Linear 	0.0 0.1
+	Animate AmmoNoClip 							FgColor 	"Vermillion" 							Linear 	0.1 0.1
+	Animate AmmoNoClip 							FgColor 	"Orange" 								Linear 	0.2 0.1
+	Animate AmmoNoClip 							FgColor 	"Yellow" 								Linear 	0.3 0.1
+	Animate AmmoNoClip 							FgColor 	"Lime" 									Linear 	0.4 0.1
+	Animate AmmoNoClip 							FgColor 	"Green" 								Linear 	0.5 0.1
+	Animate AmmoNoClip 							FgColor 	"Teal" 									Linear 	0.6 0.1
+	Animate AmmoNoClip 							FgColor 	"Cyan" 									Linear 	0.7 0.1
+	Animate AmmoNoClip 							FgColor 	"Aqua" 									Linear 	0.8 0.1
+	Animate AmmoNoClip 							FgColor 	"Blue" 									Linear 	0.9 0.1
+	Animate AmmoNoClip 							FgColor 	"Purple" 								Linear 	1.0 0.1
+	Animate AmmoNoClip 							FgColor 	"Magenta" 								Linear 	1.1 0.1
+	Animate AmmoNoClip 							FgColor 	"Ruby" 									Linear 	1.2 0.1
+}
+
+event MenuOpen
+{
+	RunEvent HudHealthBonusPulse			0.0
+	RunEvent HudLowAmmoPulse				0.0
+}
+
+event MenuClose
+{
+	RunEvent HudHealthBonusPulse			0.0
+	RunEvent HudLowAmmoPulse				0.0
+}
+
+//====================================================================================================================
+
+event FlagOutline
+{
+	RunEvent FlagOutlineHide 						0.0
+	Animate OutlineImage							Alpha		"0"									Linear 	0.1 0.2
+	
+	Animate OutlineImage							Position	"c-200 140"							Linear 	0.1 0.2
+	Animate OutlineImage							Size		"400 200"							Linear 	0.1 0.2
+
+	Animate OutlineImage							Position	"c-50 r137"							Linear 	0.7 0.2
+	Animate OutlineImage							Position	"c-50 r158"							Linear 	0.7 0.2
+	Animate OutlineImage							Size		"100 50"							Linear 	0.7 0.2
+	
+	Animate OutlineImage							Alpha		"0"									Linear 	0.9 0.1
+}
+
+//====================================================================================================================
+
+event HudTournamentSetupPanelOpen
+{
+	Animate HudTournamentSetup						Position	"c-70 -26"							Linear 	0.0 0.001
+	Animate HudTournamentSetup						Position	"c-70 26"							Spline 	0.001 0.1
+}
+
+event HudTournamentSetupPanelClose
+{
+	Animate HudTournamentSetup						Position	"c-70 26"							Linear 	0.0 0.001
+	Animate HudTournamentSetup						Position	"c-70 -26"							Spline 	0.001 0.6
+}
+
+//====================================================================================================================
+
+event ActiveTimerHighlight
+{
+	Animate TimePanelValue 							FgColor		"255 255 100 255"					Linear 	0.1 0.1
+	Animate TimePanelValue 							FgColor		"White"								Linear 	0.3 0.1
+
+	Animate TimePanelValue							FgColor		"255 255 100 255"					Linear 	0.5 0.1
+	Animate TimePanelValue 							FgColor		"White"								Linear 	0.7 0.1
+
+	Animate TimePanelValue 							FgColor		"255 255 100 255"					Linear 	0.9 0.1
+	Animate TimePanelValue 							FgColor		"White"								Linear 	1.1 0.1
+
+	Animate TimePanelValue 							FgColor		"255 255 100 255"					Linear 	1.3 0.3
+}
+
+event ActiveTimerDim
+{
+	Animate TimePanelValue 							FgColor		"White"								Linear 	0.0 0.4
+}
+
+//====================================================================================================================
+
+event CompetitiveGame_LowerChatWindow
+{
+	Animate HudChat 								ypos 		"17"								Accel 	0 0
+}
+
+event CompetitiveGame_RestoreChatWindow
+{
+	Animate HudChat 								ypos 		"17" 								Accel 	0 0
+}
+
+event HudTournament_MoveChatWindow
+{
+	RunEvent CompetitiveGame_LowerChatWindow 		0
+	RunEvent CompetitiveGame_RestoreChatWindow 		10
+}
+
+//====================================================================================================================
+
+event RDPositiveScorePulse
+{
+	Animate Score 									FgColor		"White"								Linear 	0.0 0.0
+	Animate Score 									FgColor		"White"								Linear 	0.1 0.2
+}
+
+event RDNegativeScorePulse
+{
+	Animate Score 									FgColor		"White"								Linear 	0.0 0.0
+	Animate Score 									FgColor		"White"								Linear 	0.1 0.2
+}
+
+//====================================================================================================================
+
+event TeamStatus_PlayerDead
+{
+   SetVisible DeathPanel  							0 0
+   SetVisible SkullPanel 							0 0
+   SetVisible respawntime  							1 0
+
+   Animate DeathPanel 								ypos 		0 									Accel 0 0.2
+   Animate SkullPanel								ypos 		0 									Accel 0 0.2
+   Animate respawntime 								ypos 		0 									Accel 0 0.2
+}
+
+event TeamStatus_PlayerAlive
+{
+   Animate DeathPanel 								ypos 		0 									Accel 0 0.2
+   Animate SkullPanel 								ypos 		0 									Accel 0 0.2
+   Animate respawntime 								ypos 		0 									Accel 0 0.2
+
+   SetVisible DeathPanel 			 				0 			0.2
+   SetVisible SkullPanel  							0 			0.2
+   SetVisible respawntime 							0 			0.2
+}
+
+//====================================================================================================================
+
+event HudSnapShotReminderIn
+{
+    RunEvent HudHealthDyingPulseStop 				10.0
+    RunEvent HudHealthBonusPulseStop 				10.0
+    RunEvent HudLowAmmoPulseStop 					10.0
+    RunEvent HudMedicChargedStop 					10.0
+}
+
+//====================================================================================================================

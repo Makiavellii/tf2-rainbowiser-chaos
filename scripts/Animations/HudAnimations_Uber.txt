@@ -1,0 +1,54 @@
+event HudMedicCharged
+{
+	// Rainbowizer: Uberchage Label
+	Animate ChargeLabel 							FgColor 	"Red" 								Linear 	0.0 0.1
+	Animate ChargeLabel 							FgColor 	"Vermillion" 						Linear 	0.1 0.1
+	Animate ChargeLabel 							FgColor 	"Orange" 							Linear 	0.2 0.1
+	Animate ChargeLabel 							FgColor 	"Yellow" 							Linear 	0.3 0.1
+	Animate ChargeLabel 							FgColor 	"Lime" 								Linear 	0.4 0.1
+	Animate ChargeLabel 							FgColor 	"Green" 							Linear 	0.5 0.1
+	Animate ChargeLabel 							FgColor 	"Teal" 								Linear 	0.6 0.1
+	Animate ChargeLabel 							FgColor 	"Cyan" 								Linear 	0.7 0.1
+	Animate ChargeLabel 							FgColor 	"Aqua" 								Linear 	0.8 0.1
+	Animate ChargeLabel 							FgColor 	"Blue" 								Linear 	0.9 0.1
+	Animate ChargeLabel 							FgColor 	"Purple" 							Linear 	1.0 0.1
+	Animate ChargeLabel 							FgColor 	"Magenta" 							Linear 	1.1 0.1
+	Animate ChargeLabel 							FgColor 	"Ruby" 								Linear 	1.2 0.1
+	
+	Animate ChargeLabelBigShadowExtra				Alpha 		"255"								Accel 	0.0 0.0
+	
+	// Rainbowizer: Ubercharge Meter
+	Animate ChargeMeter 							FgColor 	"Red" 								Linear 	0.0 0.1
+	Animate ChargeMeter 							FgColor 	"Vermillion" 						Linear 	0.1 0.1
+	Animate ChargeMeter 							FgColor 	"Orange" 							Linear 	0.2 0.1
+	Animate ChargeMeter 							FgColor 	"Yellow" 							Linear 	0.3 0.1
+	Animate ChargeMeter 							FgColor 	"Lime" 								Linear 	0.4 0.1
+	Animate ChargeMeter 							FgColor 	"Green" 							Linear 	0.5 0.1
+	Animate ChargeMeter 							FgColor 	"Teal" 								Linear 	0.6 0.1
+	Animate ChargeMeter 							FgColor 	"Cyan" 								Linear 	0.7 0.1
+	Animate ChargeMeter 							FgColor 	"Aqua" 								Linear 	0.8 0.1
+	Animate ChargeMeter 							FgColor 	"Blue" 								Linear 	0.9 0.1
+	Animate ChargeMeter 							FgColor 	"Purple" 							Linear 	1.0 0.1
+	Animate ChargeMeter 							FgColor 	"Magenta" 							Linear 	1.1 0.1
+	Animate ChargeMeter 							FgColor 	"Ruby" 								Linear 	1.2 0.1
+	
+	RunEvent HudMedicChargedLoop					0.6
+}
+
+event HudMedicChargedLoop
+{
+	RunEvent HudMedicCharged 						0.0
+}
+
+event HudMedicChargedStop
+{
+	StopEvent HudMedicCharged 						0.0
+	StopEvent HudMedicChargedLoop 					0.0
+	
+	Animate	ChargeLabel 							FgColor		"Ubercharge"						Linear	0.0 0.0001
+	
+	Animate	ChargeLabelBigShadow 					FgColor		"Black"								Linear 	0.0 0.0001
+	Animate ChargeLabelBigShadowExtra				Alpha 		"0"									Linear 	0.0 0.0001
+	
+	Animate	ChargeMeter 							FgColor		"Ubercharge"						Linear 	0.0 0.0001
+}
